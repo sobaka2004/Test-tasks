@@ -34,14 +34,14 @@ if __name__ == "__main__":
             input_tests = json.load(file)
 
         if not input_values or "values" not in input_values:
-            raise ValueError("Файл values.json пуст или в нем отсутсвует ключ values")
+            raise ValueError("Файл values.json пуст или в нем отсутствует ключ values")
 
         value_by_id = {}
         for element in input_values["values"]:
             value_by_id[element["id"]] = element["value"]
 
         if "tests" not in input_tests:
-            raise ValueError("В файле tests.json отсутсвует ключ tests")
+            raise ValueError("В файле tests.json отсутствует ключ tests")
             
         fill_values(input_tests["tests"], value_by_id)
 
