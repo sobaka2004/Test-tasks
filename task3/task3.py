@@ -2,7 +2,7 @@ import argparse
 import json
 import os
 
-def fill_values(data: list | dict | str | int, values_source: dict) -> None:
+def fill_values(data, values_source: dict) -> None:
     if isinstance(data, list):
         for element in data:
             fill_values(element, values_source)
